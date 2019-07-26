@@ -43,6 +43,8 @@ public class Main {
 
     private String getResponse(HttpExchange t) throws Exception{
       String url = getRequestUrl(t);
+      System.out.println("Requesting " + url);
+
       StringBuffer responseRestApi = new StringBuffer();
       try {
         int code = GetRequest.get(url, responseRestApi);
